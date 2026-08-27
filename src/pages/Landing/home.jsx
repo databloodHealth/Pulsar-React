@@ -1,4 +1,5 @@
 import style from '@/styles/home.module.css'; 
+import {Link} from 'react-router-dom'
 
 
 import blackLogo from '@/assets/images/BlackLogo.png';
@@ -23,7 +24,7 @@ export default function Home() {
         </nav>
         <div className={style.actions}>
           <a className={`${style.secondary} ${style.login}`} href="/login">Entrar</a>
-          <a className={`${style.primary} ${style.register}`} href="#">Cadastrar</a>
+          <Link className={`${style.primary} ${style.register}`} to="/cadastro">Cadastrar</Link>
         </div>
       </header>
 
