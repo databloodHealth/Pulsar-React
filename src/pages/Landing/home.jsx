@@ -8,25 +8,12 @@ import sectionImage from '@/assets/images/SectionImage.png';
 import doctorTech from '@/assets/images/DoctorTech.jpg';
 import whiteLogo from '@/assets/images/WhiteLogo.png';
 import { Faq } from '@/components/ui/FAQ';
+import Header from '@/components/ui/LandingPage/Header';
 
 export default function Home() {
   return (
     <>
-      <header className={style.header}>
-        <div className={style.logo}>
-          <img src={blackLogo} alt="Pulsar" />
-        </div>
-        <nav className={style.nav}>
-          <a href="#" className={style.active}>Inicio</a>
-          <a href="#">Sobre</a>
-          <a href="#">Contato</a>
-          <a href="#">Triagem Online</a>
-        </nav>
-        <div className={style.actions}>
-          <a className={`${style.secondary} ${style.login}`} href="/login">Entrar</a>
-          <Link className={`${style.primary} ${style.register}`} to="/cadastro">Cadastrar</Link>
-        </div>
-      </header>
+      <Header />
 
       <main className={style.main}>
         {/* HERO SECTION */}

@@ -1,68 +1,63 @@
-import React from "react";
-import Logo from "@/assets/BlackLogo.png";
+import styles from './style.module.css';
+import whiteLogo from '@/assets/images/WhiteLogo.png';
+import blackLogo from '@/assets/images/BlackLogo.png';
+import userAvatar from '@/assets/images/DoctorTech.jpg';
 
 export default function SystemLayout({ children }) {
   return (
-    <>
-      <header>
-        <div className="logo">
-          <img src={Logo} alt="Logo" />
+    <div className={styles.layout}>
+      <header className={styles.header}>
+        <div className={styles.logo}>
+          <img src={blackLogo} alt="Logo Pulsar" />
         </div>
-        <nav>
-          <a href="#" className="active">
-            Inicio
-          </a>
-          <a href="#">Sobre</a>
-          <a href="#">Contato</a>
-          <a href="#">Triagem Online</a>
-        </nav>
-        <div className="actions">
-          <a className="secondary login" href="./src/pages/login.html">
-            Entrar
-          </a>
-          <a className="primary register" href="#">
-            Cadastrar
-          </a>
+
+        <div className={styles.boxUsuario}>
+          <img src={userAvatar} alt="userFoto" className={styles.fotoUser} />
+          <div className={styles.infoUsuario}>
+            <p id={styles.statusUsuario}>Doador Inapto</p>
+            <p id={styles.nomeUsuario}>João Silva</p>
+          </div>
+          <i className={`fa-solid fa-arrow-right-from-bracket ${styles.exitIcon}`}></i>
         </div>
       </header>
-      <main>
-      {children}
-      </main>
-      <footer>
-    <div className="containerFooter">
-      <div className="pulsar">
-        <img src="./src/assets/images/WhiteLogo.png" alt="Logo Pulsar" />
-        <p>
-          Comprometidos com a excelência clínica e a preservação da vida
-          através da tecnologia e do humanismo.
-        </p>
-      </div>
-      <div className="links">
-        <div className="institutional">
-          <h3>Institucional</h3>
-          <a href="#">Sobre nós</a>
-          <a href="#">Unidades</a>
-          <a href="#">Transparência</a>
+
+      <aside className={styles.sidebar}>
+        <div className={styles.roleGroup}>
+          <div className={styles.navigationIconContainer}>
+            <i className="fa-solid fa-dice-d6"></i>
+          </div>
+          <div className={styles.roleText}>
+            <h3>Gestão central</h3>
+            <span>DOADOR</span>
+          </div>
         </div>
-        <div className="contact">
-          <h3>Contato</h3>
-          <a href="#">Central: 0800 700 400</a>
-          <a href="#">Email: suporte@pulsar.com.br</a>
-          <a href="#">Instagram</a>
+
+        <nav className={styles.anchorContainer}>
+          <a href="#" className={`${styles.link} ${styles.activeLink}`}>
+            <i className="fa-solid fa-house"></i>Início
+          </a>
+          <a href="#" className={styles.link}>
+            <i className="fa-solid fa-droplet"></i>Minhas doações
+          </a>
+          <a href="#" className={styles.link}>
+            <i className="fa-solid fa-bell"></i>Notificações
+          </a>
+          <a href="#" className={styles.link}>
+            <i className="fa-solid fa-user"></i>Perfil
+          </a>
+        </nav>
+
+        <div className={styles.buttonContainer}>
+          <button className={styles.navButton}>
+            <i className="fa-solid fa-gear"></i>Configurações
+          </button>
+          <a href="#" className={styles.buttonLink}>
+            <i className="fa-solid fa-circle-info"></i>Central de ajuda
+          </a>
         </div>
-      </div>
+      </aside>
+
+      <main className={styles.main}>{children}</main>
     </div>
-    <div className="footerBottom">
-      <div className="divisor"></div>
-      <div className="finalTexts">
-        <span>&copy; 2026 Pulsar - Banco de Sangue. Todos os direitos reservados</span>
-        <div className="finalList">
-          <a href="">Termos de Uso</a>
-          <a href="">Privacidade</a>
-        </div>
-      </div>
-    </div>
-  </footer>
-    </>
   );
 }
