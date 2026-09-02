@@ -66,9 +66,9 @@ body {
 
 .senhaContainer {
   width: 530px;
-  background: #fff;
-  border: 1px solid #00000003;
-  box-shadow: 10px 20px 40px 0px #00000006;
+  background: var(--branco);
+  border: 1px solid rgba(0, 0, 0, 0.012);
+  box-shadow: 10px 20px 40px 0px rgba(0, 0, 0, 0.04);
   padding: 40px 40px 55px 40px;
   border-radius: 8px;
   display: flex;
@@ -182,7 +182,7 @@ body {
 .termosCheckbox .checkbox {
   width: 20px;
   height: 20px;
-  background: white;
+  background: var(--branco);
   outline: 1px solid var(--outlineVermelho);
   border-radius: 2px;
   border: 0;
@@ -198,8 +198,8 @@ body {
 .termosCheckbox .checkmark {
   height: 10px;
   width: 5px;
-  border-right: solid 2px white;
-  border-bottom: solid 2px white;
+  border-right: solid 2px var(--branco);
+  border-bottom: solid 2px var(--branco);
   transform: rotate(45deg);
   position: absolute;
   top: 4px;
@@ -220,7 +220,7 @@ body {
 }
 
 .botForm button[type="submit"] {
-  color: white;
+  color: var(--branco);
   font-size: 18px;
   font-weight: 500;
   padding: 20px 45px;

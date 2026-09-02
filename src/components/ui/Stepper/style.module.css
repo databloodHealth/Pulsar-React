@@ -39,7 +39,7 @@
 .active h1 {
   background-color: var(--vermelhoFonte);
   border-radius: 12px;
-  color: white;
+  color: var(--branco);
 }
 
 .active h2 {

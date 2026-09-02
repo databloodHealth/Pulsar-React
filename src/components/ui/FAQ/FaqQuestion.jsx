@@ -12,7 +12,7 @@ export function FaqQuestion({ question, isActive = false, onToggle }) {
         style={{
           transform: isActive ? "rotate(-45deg)" : "",
           backgroundColor: isActive ? "var(--primary)" : "",
-          color: isActive ? "#fff" : "",
+          color: isActive ? "var(--branco)" : "",
         }}
       >
         <X size={20}/>

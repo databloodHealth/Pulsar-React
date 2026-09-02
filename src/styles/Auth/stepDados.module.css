@@ -1,31 +1,4 @@
-:root {
-  --cinzaBody: #FBF9F8;
-  --branco: #FFFFFF;
-  --preto: #000000;
-  --cinzaFonte: #3f3f3f;
-  --cinzaInput: #EFEDED;
-  --vermelhoBotao: #B41B0F;
-  --vermelhoHover: #ee0000;
-  --cinzaLinha: #c9c9c9;
-  --vermelhoCadastro: #B41B0F;
-  --cinzaFundo: #eeeeee;
-  --verdeIconeFundo: #86F8C9;
-  --verdeIcone: #005331;
-  --azulIconeFundo: #D1E4FF;
-  --azulIcone: #28496B;
-  --azulFonte: #28496B;
-  --cinzaIcone: #777777;
-  --vermelhoFonte: #B41B0F;
-  --traco: #E1BFB9;
-  --escritaCinzaClara: #59413D;
-  --backgroundEtapa: #E4E2E2;
-  --azulLabel: #416084;
-  --escritaCinzaClaraInput: #59413d79;
-  --containerTitulo: #1b1c1c;
-  --escritaInfo: #59413daa;
-  --aHoverAzul: #398ef0;
-  --escritaForte: #1B1C1C;
-}
+
 
 :global(body) {
   min-height: 100svh;
@@ -142,7 +115,7 @@
 
 .botForm button {
   background-color: var(--vermelhoBotao);
-  color: white;
+  color: var(--branco);
   border: none;
   outline: none;
   padding: 18px 40px;
